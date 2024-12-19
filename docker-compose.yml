@@ -1,0 +1,8 @@
+services:
+  chatroom:
+    build: .
+    environment:
+      - CHAT_PORT:14447
+      - MAX_USERS:20
+    ports:
+      - ${CHAT_PORT:-14447}:14447

@@ -1,0 +1,9 @@
+FROM python
+
+ENV CHAT_PORT=14447
+ENV MAX_USERS=20
+
+COPY packages packages
+COPY server.py server.py
+
+ENTRYPOINT ["python3", "server.py"]
